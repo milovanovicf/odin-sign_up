@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('/nordic/norse-bold-webfont.woff2') format('woff2'),
+         url('/nordic/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    //width: 100vw;
+}
+
+.hero {
+    background-image: url("/halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 0 0 50%;
+    padding-top: 20rem;
+
+    .logo_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        padding: 1rem 0;
+        
+    }
+
+    &_logo {
+        width: 7.5rem;
+        height: 10rem;
+    }
+
+    &_text {
+        font-size: 8rem;
+        font-family: 'norsebold';
+        color:#fff;
+        text-transform: uppercase;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column; 
+    font-family: "Montserrat", sans-serif;
+    
+
+    &_hero {
+        font-weight: 800;
+        padding: 15rem 0 5rem 0;
+        background-color: rgb(243, 242, 242);
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+
+    .paragraph {
+        padding: 0 4rem;
+
+        &_footer {
+            display: block;
+            padding: 2rem 0 2rem 0;
+        }
+    }
+
+}
+
+.form_container {
+    padding-left: 4rem;
+    box-shadow: 0 1rem 2rem rgba(#000, 0.1);
+    padding-bottom: 2rem;
+
+
+    &_text {
+        font-size: 2rem;
+        padding: 2rem 0;
+        font-weight: 800;
+    }
+}
+
+label, input {
+    display: block;
+}
+
+
+.form_container_name {
+    display: flex;
+}
+
+label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-size: 9px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    padding: 0.4rem 0;
+    padding-right: 3rem;
+    padding-left: 0.5rem;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 2px;
+    outline: none;
+
+    &:not(:last-child) {
+        margin-bottom: 0.4rem;
+
+    }
+}
+
+
+input:focus {
+    box-shadow: 0 1rem 2rem rgba(#000, 0.1);
+    transition: all 0.2s;
+}
+
+input[name="last_name"]:focus{
+border-color: rgb(7, 177, 245);
+}
+
+.btn_container {
+    padding: 4rem 0 0 4rem;
+
+    &_btn {
+        padding: 1.2rem 4rem;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: 800;
+        background-color: #596D48;
+        cursor: pointer;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        box-shadow: 0 1rem 2rem rgba(#000, 0.1);
+    }
+
+    &_text {
+        font-size: 1.4rem;
+    }
+
+    &_link {
+        text-decoration: none;
+        color: #596D48;
+        font-weight: 800;
+    }
+}
+
+.error {
+    border-color: red;
+}
+
+.correct {
+    border-color: rgb(1, 179, 1)
+}
+
+.error_text {
+    color: red;
+    font-size: 1.1rem;
+}
